@@ -26,13 +26,18 @@ const catalog = [
   { category: "Socks", name: "Bombas Socks", price: 15, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxRfE6MWWl5RfxHgq7p1YkWC64gDdFDIBTLUg9y7Azfw&s" },
 ];
 
+let x = 0;
+
 function inject() {
-  const card = document.querySelector(".card");
   const header = document.querySelector("#header");
   const category = document.querySelector("#category");
   const price = document.querySelector("#price");
+  const image = document.getElementById("image");
 
-  header.textContent = `${catalog[0].name}`;
-  category.textContent = `Category: ${catalog[0].category}`;
-  price.textContent = `Price: $${catalog[0].price}`;
+  header.textContent = `${catalog[x].name}`;
+  category.textContent = `Category: ${catalog[x].category}`;
+  price.textContent = `Price: $${catalog[x].price}`;
+  image.setAttribute("src", catalog[x].image);
 }
+
+inject();

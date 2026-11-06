@@ -4,15 +4,24 @@ body,
   padding: 0;
 }
 
-.card {
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
+}
+
+.card {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   width: 300px;
-  height: 400px;
+  height: 450px;
   background-color: lightblue;
+  border-radius: 1rem;
+  border: 2px solid black;
 }
 
 .card #header {
@@ -28,4 +37,20 @@ body,
 .card #price {
   margin: 0;
   padding: 0;
+}
+
+.card #button {
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  margin-top: auto;
+}
+
+.card #image {
+  padding: 10px;
+  padding-top: 10px;
+  max-width: 70%;
+  height: auto;
 }

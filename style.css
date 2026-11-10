@@ -1,14 +1,34 @@
 html,
 body,
 * {
-  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
 }
 
-.container {
+.hero {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(91, 102, 131, 0.5)), url(images/heropage.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+.container {
+  margin-top: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
   padding: 10px;
+  gap: 30px;
 }
 
 .card {
@@ -24,33 +44,7 @@ body,
   border: 2px solid black;
 }
 
-.card #header {
-  margin: 0;
-  padding: 0;
-}
-
-.card #category {
-  margin: 0;
-  padding: 0;
-}
-
-.card #price {
-  margin: 0;
-  padding: 0;
-}
-
-.card #button {
-  cursor: pointer;
+.image {
   width: 200px;
-  height: 40px;
-  margin: 0;
-  padding: 0;
-  margin-top: auto;
-}
-
-.card #image {
-  padding: 10px;
-  padding-top: 10px;
-  max-width: 70%;
   height: auto;
 }

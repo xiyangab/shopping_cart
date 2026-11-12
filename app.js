@@ -46,5 +46,33 @@ function inject() {
 }
 
 inject();
+// function getRGB() {
+//   let r = Math.floor(Math.random() * 256);
+//   let g = Math.floor(Math.random() * 256);
+//   let b = Math.floor(Math.random() * 256);
+//   const box = document.querySelector(".box");
+//   box.style.backgroundColor = `rgb(${r},${g},${b})`;
+//   header.textContent = `${r},${g},${b}`;
+// }
 
-function filter() {}
+// function inject() {
+//   const box = document.querySelector(".box");
+//   box.insertAdjacentHTML("afterbegin", `<h2 class="test">Inserted</h2>`);
+// }
+// let x = 0;
+
+// document.getElementById("btn").addEventListener("click", function () {
+//   getRGB();
+//   console.log("test");
+//   x++;
+//   inject();
+// });
+
+function getFilter(filter) {
+  const container = document.querySelector(".container");
+  const filtered = catalog.filter((item) => item.role === `${filter}`);
+}
+
+document.getElementById("btn").addEventListener("click", function () {
+  getFilter();
+});

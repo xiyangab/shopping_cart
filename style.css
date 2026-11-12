@@ -10,7 +10,7 @@ body,
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: linear-gradient(rgba(91, 102, 131, 0.5)), url(images/heropage.jpg);
+  background-image: linear-gradient(rgba(91, 102, 131, 0.7)), url(images/heropage.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

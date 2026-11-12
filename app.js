@@ -38,6 +38,7 @@ function inject() {
           <p class="category">Category: ${item.category}</p>
           <p class="price">Price: $${item.price}</p>
           <img class="image" src="${item.image}" alt="">
+          <button class="btn">Add to Cart</button>
         </div>
       `,
     );
@@ -45,3 +46,5 @@ function inject() {
 }
 
 inject();
+
+function filter() {}

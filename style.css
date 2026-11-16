@@ -23,6 +23,7 @@ body,
   margin-top: 100px;
   margin-left: 200px;
   margin-right: 200px;
+  margin-bottom: 200px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -59,15 +60,16 @@ body,
   height: 40px;
   border-radius: 5px;
   margin-top: auto;
+  background-color: #f5d77c;
 }
 
 .btn:hover {
-  background-color: grey;
   cursor: pointer;
+  background-color: gray;
 }
 
 .filter {
-  margin-top: 200px;
+  margin-top: 100px;
   margin-left: 200px;
   margin-right: 200px;
   display: flex;
@@ -88,9 +90,30 @@ body,
   width: 200px;
   height: 40px;
   border-radius: 5px;
+  background-color: orange;
+  font-weight: bold;
+}
+.all {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: orange;
+  font-weight: bold;
 }
 
 .button:hover {
   background-color: grey;
   cursor: pointer;
+}
+
+.all:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+
+.contact {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }

@@ -26,10 +26,11 @@ const catalog = [
   { category: "socks", name: "Bombas Socks", price: 15, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxRfE6MWWl5RfxHgq7p1YkWC64gDdFDIBTLUg9y7Azfw&s" },
 ];
 
-function inject() {
+function inject(items) {
   const container = document.querySelector(".container");
+  container.innerHTML = "";
 
-  catalog.forEach((item) => {
+  items.forEach((item) => {
     container.insertAdjacentHTML(
       "beforeend",
       `
@@ -45,11 +46,37 @@ function inject() {
   });
 }
 
-inject();
+inject(catalog);
 
 const buttons = document.querySelectorAll(".filter .button");
 buttons.forEach((button) =>
   button.addEventListener("click", function (event) {
-    console.log(event.currentTarget.dataset.category);
+    const category = event.currentTarget.dataset.category;
+    const filteredItems = catalog.filter((item) => item.category === category);
+    inject(filteredItems);
   }),
 );
+
+const all = document.querySelectorAll(".filter .all");
+all.forEach((all) =>
+  all.addEventListener("click", function () {
+    inject(catalog);
+  }),
+);
+
+function addCart() {
+  const buttons = document.querySelectorAll(".card .btn");
+
+  buttons.forEach((button) =>
+    button.addEventListener("click", (event) => {
+      const card = event.currentTarget.closest(".card");
+      const name = card.querySelector(".name").textContent;
+      const price = card.querySelector(".price").textContent;
+
+      console.log(name);
+      console.log(price);
+    }),
+  );
+}
+
+addCart();

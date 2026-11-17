@@ -37,7 +37,8 @@ function inject(items) {
         <div class="card">
           <h2 class="name">${item.name}</h2>
           <p class="category">Category: ${item.category}</p>
-          <p class="price">Price: $${item.price}</p>
+          <p>cost: $</p>
+          <p class="price">${item.price}</p>
           <img class="image" src="${item.image}" alt="">
           <button class="btn">Add to Cart</button>
         </div>
@@ -65,16 +66,10 @@ all.forEach((all) =>
 );
 
 function addCart() {
-  const buttons = document.querySelectorAll(".card .btn");
-
-  buttons.forEach((button) =>
-    button.addEventListener("click", (event) => {
-      const card = event.currentTarget.closest(".card");
-      const name = card.querySelector(".name").textContent;
-      const price = card.querySelector(".price").textContent;
-
-      console.log(name);
-      console.log(price);
+  const btn = document.querySelectorAll(".card .btn");
+  btn.forEach((button) =>
+    button.addEventListener("click", function () {
+      console.log("test");
     }),
   );
 }

@@ -37,41 +37,50 @@ function inject(items) {
         <div class="card">
           <h2 class="name">${item.name}</h2>
           <p class="category">Category: ${item.category}</p>
-          <p>cost: $</p>
-          <p class="price">${item.price}</p>
+          <p class="price">Price: $${item.price}</p>
           <img class="image" src="${item.image}" alt="">
           <button class="btn">Add to Cart</button>
         </div>
       `,
     );
   });
+  buttonfunctions();
 }
 
 inject(catalog);
 
-const buttons = document.querySelectorAll(".filter .button");
-buttons.forEach((button) =>
-  button.addEventListener("click", function (event) {
-    const category = event.currentTarget.dataset.category;
-    const filteredItems = catalog.filter((item) => item.category === category);
-    inject(filteredItems);
-  }),
-);
+function buttonfunctions() {
+  const buttons = document.querySelectorAll(".filter .button");
+  buttons.forEach((button) =>
+    button.addEventListener("click", function (event) {
+      const category = event.currentTarget.dataset.category;
+      const filteredItems = catalog.filter((item) => item.category === category);
+      inject(filteredItems);
+    }),
+  );
 
-const all = document.querySelectorAll(".filter .all");
-all.forEach((all) =>
-  all.addEventListener("click", function () {
-    inject(catalog);
-  }),
-);
-
-function addCart() {
   const btn = document.querySelectorAll(".card .btn");
-  btn.forEach((button) =>
-    button.addEventListener("click", function () {
-      console.log("test");
+  btn.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      const parentDiv = event.target.closest("div");
+      console.log(parentDiv);
+    }),
+  );
+
+  const all = document.querySelectorAll(".filter .all");
+  all.forEach((all) =>
+    all.addEventListener("click", function () {
+      inject(catalog);
     }),
   );
 }
 
-addCart();
+document.querySelector("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  console.log("submitted form");
+  let x = document.querySelector("#coupon");
+  console.log(x.value);
+  x.value = "";
+});
+
+function addToCart() {}

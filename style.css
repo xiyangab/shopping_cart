@@ -117,3 +117,24 @@ body,
   justify-content: center;
   padding: 20px;
 }
+
+.show-cart {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.cartimage {
+  width: 150px;
+  height: auto;
+}

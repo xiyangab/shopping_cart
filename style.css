@@ -23,7 +23,7 @@ body,
   margin-top: 100px;
   margin-left: 200px;
   margin-right: 200px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -137,4 +137,12 @@ body,
 .cartimage {
   width: 150px;
   height: auto;
+}
+
+.cart {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  height: 200px;
 }

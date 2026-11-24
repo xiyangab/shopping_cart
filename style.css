@@ -139,10 +139,31 @@ body,
   height: auto;
 }
 
-.cart {
+.cart-container {
+  padding: 40px;
+  text-align: center;
   background-color: orange;
   display: flex;
   justify-content: center;
   padding: 20px;
-  height: 200px;
+  flex-direction: column;
+  max-height: fit-content;
+}
+
+.card-title {
+  padding: 10px;
+  background-color: darkorange;
+  text-align: center;
+  font-size: 60px;
+}
+
+.cart-container .information {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.name {
+  font-size: 30px;
 }

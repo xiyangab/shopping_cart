@@ -68,6 +68,20 @@ function buttonfunctions() {
       console.log(parentDiv);
       console.log(name);
       console.log({ name: name, quantity: target.count });
+
+      const cart = document.querySelector(".cart-container");
+      total += target.price;
+      console.log(total);
+      cart.insertAdjacentHTML(
+        "beforeend",
+        `
+        <div class="information">
+          <p class="name">${target.name}</p>
+          <p class="price">Price: $${target.price}</p>
+        </div>
+      `,
+      );
+      console.log(total);
     }),
   );
 }
@@ -99,3 +113,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
   console.log(x.value);
   x.value = "";
 });
+
+//const count = document.querySelectorAll('#parent-div div').length;
+//cart length

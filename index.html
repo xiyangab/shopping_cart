@@ -5,6 +5,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <section class="hero">
       <div class="herocontent">
@@ -14,6 +15,7 @@
         <p>MrBeast Approved</p>
       </div>
     </section>
+
     <div class="filter">
       <h2 id="filter-heading">Filters</h2>
       <button class="all" data-category="all">All</button>
@@ -23,20 +25,29 @@
       <button class="button" data-category="graphic-tees">Graphic-Tees</button>
       <button class="button" data-category="socks">Socks</button>
     </div>
+
     <div id="class-container" class="container"></div>
-    <div class="cart"></div>
+
+    <div class="card-title">
+      <h2 class="title">Your Cart:</h2>
+    </div>
+    <div class="cart-container"></div>
+
     <form action="submit">
       <label for="coupon">Enter Coupon Code</label>
       <input type="text" name="coupon" id="coupon" />
       <button id="coupon-btn" type="submit">Enter Code</button>
     </form>
+
     <div class="show-cart">
       <img class="cartimage" src="images/shoppingcart.png" alt="shoppingcart" />
       <p class="amount">Items in Cart:</p>
     </div>
+
     <div class="contact">
       <h2>get in contact @xiyangisveryhandsome@gmail.com</h2>
     </div>
+
     <script src="app.js"></script>
   </body>
 </html>
